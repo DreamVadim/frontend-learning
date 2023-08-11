@@ -1,0 +1,85 @@
+:root {
+    --font-size: 27px;
+    --line-height: 37.5px;
+  }
+  
+  @font-face {
+    font-weight: 400;
+    font-family: Caveat;
+    src: url("../assets/fonts/caveat.woff2") format("woff2");
+  }
+  
+  @font-face {
+    font-weight: 400;
+    font-family: "Marck Script";
+    src: url("../assets/fonts/marckscript.woff2") format("woff2");
+  }
+  
+  body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+  
+    background-color: #4db6ac;
+  }
+  
+  .notebook {
+    position: relative;
+  
+    width: 750px;
+    height: 700px;
+  
+    box-sizing: border-box;
+    padding-top: 50px;
+  
+    word-spacing: 6px;
+  
+    background-color: #fff;
+    box-shadow: 4px 6px 16px 3px #009688;
+  }
+  
+  .notebook::before {
+    position: absolute;
+    top: 0;
+    left: 50px;
+  
+    width: 2px;
+    height: 100%;
+  
+    background-color: #ff5722;
+  
+    content: "";
+  }
+  
+  .paper {
+    height: 100%;
+    padding: 0 60px;
+  
+    font-size: var(--font-size);
+    line-height: var(--line-height);
+  
+    background-image:
+      repeating-linear-gradient(
+        180deg,
+        #fff,
+        #fff calc(var(--line-height) - 1px),
+        #80cdc4 calc(var(--line-height) - 1px),
+        #80cdc4 var(--line-height)
+      );
+  }
+  
+  pre {
+    margin: 0;
+    padding-top: 10px;
+  
+    font-weight: 400;
+    font-family: Caveat, cursive;
+  }
+  
+  .author {
+    font-weight: 400;
+    font-family: "Marck Script", cursive;
+    text-align: right;
+  }

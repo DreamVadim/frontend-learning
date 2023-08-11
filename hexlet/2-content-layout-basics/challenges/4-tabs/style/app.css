@@ -1,0 +1,94 @@
+@font-face {
+    font-weight: 400;
+    font-family: Raleway;
+    src: url("../assets/fonts/Raleway-Regular.ttf") format("truetype");
+  }
+  
+  @font-face {
+    font-weight: 700;
+    font-family: Raleway;
+    src: url("../assets/fonts/Raleway-Bold.ttf") format("truetype");
+  }
+  
+  body {
+    box-sizing: border-box;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 50px;
+  
+    color: #eee;
+  
+    font-size: 20px;
+    line-height: 1.5;
+    font-family: Raleway, sans-serif;
+    font-weight: 400;
+  
+    background-image: linear-gradient(to right top, #222831, #282d36, #2d333b, #333841, #393e46);
+  }
+  
+  img {
+    /* max-width: 100%; */
+    max-width: fit-content;
+    vertical-align: middle;
+  }
+  
+  a {
+    color: inherit;
+  }
+  
+  h1 {
+    font-size: 2em;
+  }
+  
+  h2 {
+    color: #00adb5;
+    font-size: 1.5em;
+  }
+  
+  .tabs {
+    width: 1024px;
+    margin: 0 auto;
+  
+    column-count: 3;
+    column-gap: 0;
+  }
+  
+  .tabs-content {
+    column-span: all;
+    column-count: 3;
+    column-gap: 30px;
+    padding: 20px;
+    background-color: #393e46;
+  }
+  
+  .tab-name {
+    padding: 20px;
+    margin: 0;
+    text-align: center;
+    text-decoration: none;
+    background-color: #00adb5;
+    break-inside: avoid;
+    display: block;
+  }
+  
+  .tab-name:focus,
+  .tab-name:hover {
+    border-bottom: 3px solid #5ffbf1;
+  }
+  
+  .tabs-content-item {
+    display: none;
+  }
+  
+  /* забыл про фокус состояние */
+  [data-tab="html"]:hover ~ .tabs-content [data-tab-content="html"],
+  [data-tab="css"]:hover ~ .tabs-content [data-tab-content="css"],
+  [data-tab="js"]:hover ~ .tabs-content [data-tab-content="js"] {
+    display: block;
+  }
+
+  
+  .span-all {
+    column-span: all;
+  }
